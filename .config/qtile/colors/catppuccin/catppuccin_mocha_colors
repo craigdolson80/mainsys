@@ -1,0 +1,27 @@
+["#f5e0dc", "#f5e0dc"], #color 0 Rosewater 
+            ["#f2cdcd", "#f2cdcd"], #color 1 Flamingo 		
+            ["#f5c2e7", "#f5c2e7"],	#color 2 Pink 	 	
+            ["#cba6f7", "#cba6f7"],	#color 3 Mauve 	 	
+            ["#f38ba8", "#f38ba8"], #color 4 Red 	 	
+            ["#eba0ac", "#eba0ac"], #color 5 Maroon 	 	
+            ["#fab387", "#fab387"], #color 6 Peach 	 	
+            ["#f9e2af", "#f9e2af"], #color 7 Yellow 	 	
+            ["#a6e3a1", "#a6e3a1"], #color 8 Green 	 	
+            ["#94e2d5", "#94e2d5"], #color 9 Teal 	 	
+            ["#89dceb", "#89dceb"], #color 10 Sky 	 	
+            ["#74c7ec", "#74c7ec"], #color 11 Sapphire 	 	
+            ["#89b4fa", "#89b4fa"], #color 12 Blue 	 	
+            ["#b4befe", "#b4befe"],	#color 13 Lavender 	 	
+            ["#cdd6f4", "#cdd6f4"], #color 14 Text 	 	
+            ["#bac2de", "#bac2de"], #color 15 Subtext1 	 	
+            ["#a6adc8", "#a6adc8"], #color 16 Subtext0 	 	
+            ["#9399b2", "#9399b2"], #color 17 Overlay2 	 	
+            ["#7f849c", "#7f849c"], #color 18 Overlay1 	 	
+            ["#6c7086", "#6c7086"], #color 19 Overlay0 	 	
+            ["#585b70", "#585b70"], #color 20 Surface2 	 	
+            ["#45475a", "#45475a"], #color 21 Surface1 	 	
+            ["#313244", "#313244"], #color 22 Surface0 	 	
+            ["#1e1e2e", "#1e1e2e"], #color 23 Base 	 	
+            ["#181825", "#181825"], #color 24 Mantle 	 	
+            ["#11111b", "#11111b"],	#color 25 Crust
+            ["#FFFFFF", "#FFFFFF"], #color 26 White
