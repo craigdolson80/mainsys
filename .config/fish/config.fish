@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 function fish_greeting
-    pfetch
+     neofetch 
 end
 
 # ~/.config/fish/config.fish
