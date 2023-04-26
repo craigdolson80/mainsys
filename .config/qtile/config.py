@@ -11,7 +11,7 @@ from libqtile.widget import Spacer
 mod = "mod4"
 mod1 = "control"
 mod3 = "alt"
-terminal = "alacritty"
+terminal = "kitty"
 mybrowser = "firefox"
 myeditor = "geany"
 mymenu = "/home/craig/.config/rofi/launchers/type-3/launcher.sh"
@@ -102,6 +102,8 @@ keys = [
     Key([mod], "b", lazy.spawn("firefox"), desc="Launch Firefox"),
     Key([mod], "g", lazy.spawn("geany"), desc="Launch Geany"),
     Key([mod], "f", lazy.spawn("thunar"), desc="Launch PCManFM"),
+    Key([mod], "e", lazy.spawn("thunderbird"), desc="Launch Thunderbird"),
+
        
    #Custom DMENU Launcher
    Key([mod, "control"], "Return", lazy.run_extension(extension.DmenuRun(
@@ -150,7 +152,10 @@ groups = [
             Match(wm_class=["pcmanfm", "Thunar"]),
         ]
           ),
-    Group("7", label="7"),
+    Group("7", label="7",
+    matches=[
+            Match(wm_class=["thunderbird"]),
+        ]),
     Group("8", label="8"),
     Group("9", label="9"),
 ]
@@ -199,13 +204,13 @@ groups.append(
 
 layouts = [
      layout.MonadTall(
-                     border_focus = colors[10],
+                     border_focus = colors[3],
                      border_normal = colors[23],
                      border_width = 1,
                      margin = 10
                      ),
      layout.Columns(
-                    border_focus = colors[10],
+                    border_focus = colors[3],
                     border_normal = colors[23],
                     border_width = 1,
                     margin = 10
@@ -213,22 +218,22 @@ layouts = [
      layout.Max(),
     # Try more layouts by unleashing below layouts.
      layout.Stack(
-                  border_focus = colors[10],
+                  border_focus = colors[3],
                   border_normal = colors[23],
                   border_width = 1,
                   margin = 10,
                   num_stacks=2
                   ),
 	 layout.Bsp(
-	            border_focus = colors[10],
+	            border_focus = colors[3],
                 border_normal = colors[23],
                 border_width = 1,
                 margin = 10
 	            ),
      layout.Floating(
-                     border_focus = colors[10],
+                     border_focus = colors[3],
                      border_normal = colors[23],
-                     border_width = 1,
+                     border_width = 0,
                      margin = 10
                      ),           
     # layout.Matrix(),
@@ -552,9 +557,9 @@ cursor_warp = False
 
 # Floating Rules
 floating_layout = layout.Floating(
-                     border_focus = colors[10],
+                     border_focus = colors[3],
                      border_normal = colors[23],
-                     border_width = 1,
+                     border_width = 0,
                      margin = 10,
 
     float_rules=[
