@@ -308,6 +308,7 @@ screens = [
                                background = colors[23],
 						       foreground = colors[6],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),            
                 widget.CPU(
@@ -328,6 +329,7 @@ screens = [
                                background = colors[23],
 						       foreground = colors[7],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),
                 widget.Memory(
@@ -348,6 +350,7 @@ screens = [
                                background = colors[23],
 						       foreground = colors[8],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),
                 widget.Net(
@@ -368,6 +371,7 @@ screens = [
                                background = colors[23],
 						       foreground = colors[3],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),
                 widget.Clock(
@@ -436,6 +440,7 @@ Screen(
                                background = colors[23],
 						       foreground = colors[9],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),                                      
                 widget.CheckUpdates(
@@ -461,6 +466,7 @@ Screen(
                                background = colors[23],
 						       foreground = colors[6],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),            
                 widget.CPU(
@@ -481,6 +487,7 @@ Screen(
                                background = colors[23],
 						       foreground = colors[7],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),
                 widget.Memory(
@@ -501,6 +508,7 @@ Screen(
                                background = colors[23],
 						       foreground = colors[8],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),
                 widget.Net(
@@ -521,6 +529,7 @@ Screen(
                                background = colors[23],
 						       foreground = colors[3],
 						       fontsize = 12,
+                               font = 'Font Awesome 6 Free',
 						       padding = 3
                                ),
                 widget.Clock(
