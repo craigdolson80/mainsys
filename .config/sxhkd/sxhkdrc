@@ -13,6 +13,10 @@ super + b
 # program launcher
 super + @space
 	/home/craig/.config/rofi/launchers/type-3/launcher.sh
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae669e02a7c60a0c7a09709f0f42a3a072f246e7
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -74,11 +78,17 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
+<<<<<<< HEAD
 ;super + bracket{left,right}
 ;	bspc desktop -f {prev,next}.local
 #ctrl + alt + {Left,Right}
 super + {Left,Right}  
+=======
+super + {Left,Right}
+>>>>>>> ae669e02a7c60a0c7a09709f0f42a3a072f246e7
 	bspc desktop -f {prev,next}.local
+#ctrl + alt + {Left,Right} 
+#	bspc desktop -f {prev,next}.local
 	
 # focus the last node/desktop
 super + {grave,Tab}
