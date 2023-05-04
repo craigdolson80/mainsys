@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # CUSTOM APPLICATION HOTKEYS
 super + b
@@ -12,7 +12,7 @@ super + b
 
 # program launcher
 super + @space
-	rofi -show drun
+	/home/craig/.config/rofi/launchers/type-3/launcher.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -71,10 +71,10 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-;super + bracket{left,right}
-;	bspc desktop -f {prev,next}.local
-ctrl + alt + {Left,Right} 
+super + {Left,Right}
 	bspc desktop -f {prev,next}.local
+#ctrl + alt + {Left,Right} 
+#	bspc desktop -f {prev,next}.local
 	
 # focus the last node/desktop
 super + {grave,Tab}
