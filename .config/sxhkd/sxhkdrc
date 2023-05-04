@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # CUSTOM APPLICATION HOTKEYS
 super + b
@@ -12,8 +12,7 @@ super + b
 
 # program launcher
 super + @space
-	rofi -show drun
-
+	/home/craig/.config/rofi/launchers/type-3/launcher.sh
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -25,6 +24,10 @@ super + Escape
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
+
+# Logout/Lock/Poweroff
+super + ctrl + q
+    /home/craig/.config/rofi/powermenu/type-2/powermenu.sh
 
 # close and kill
 super + {_,shift + }q
@@ -73,7 +76,8 @@ super + {_,shift + }c
 # focus the next/previous desktop in the current monitor
 ;super + bracket{left,right}
 ;	bspc desktop -f {prev,next}.local
-ctrl + alt + {Left,Right} 
+#ctrl + alt + {Left,Right}
+super + {Left,Right}  
 	bspc desktop -f {prev,next}.local
 	
 # focus the last node/desktop
@@ -88,7 +92,13 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' --follow
+        bspc {desktop --focus,node --to-desktop} 'focused:^{1-9,10}' --follow
+#	bspc {desktop -f,node -d} '^{1-9,10}' --follow
+
+# move and switch windows between monitors
+super + {_,shift +} {comma, period}
+	bspc {monitor --focus,node --to-monitor} {prev,next} --follow
+
 	
 #
 # preselect
