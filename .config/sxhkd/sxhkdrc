@@ -90,14 +90,24 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+# default config - replaced by "# KeyChord Focus / Send to desktiop on given monitor -- reddit post - IT WORKS"
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-        bspc {desktop --focus,node --to-desktop} 'focused:^{1-9,10}' --follow
+# super + {_,shift + }{1-9,0}
+#       bspc {desktop --focus,node --to-desktop} 'focused:^{1-9,10}' --follow
 #	bspc {desktop -f,node -d} '^{1-9,10}' --follow
+
+# Change focused monitor
+super + alt + {Left,Right}
+    bspc monitor -f {west,east}
 
 # move and switch windows between monitors
 super + {_,shift +} {comma, period}
 	bspc {monitor --focus,node --to-monitor} {prev,next} --follow
+
+# KeyChord Focus / Send to desktiop on given monitor -- reddit post - IT WORKS
+super + {_,shift + } {1,2} ; {1-9,0}
+	notify-send "changing desktop"; \
+	bspc {desktop -f, node -d} "^{1,2}:^{1-9,10}" --follow
 
 	
 #
