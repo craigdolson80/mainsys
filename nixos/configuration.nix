@@ -180,6 +180,8 @@ in
      variety
      lxappearance
      networkmanagerapplet
+     udiskie
+     udisks
    ];
  
 #Services 
@@ -232,7 +234,8 @@ in
 	};
 
   #BSPWM
-
+  
+  xsession.windowManager.bspwm.enable = true;
   xsession.windowManager.bspwm.monitors	= {
   Virtual-1 = [
       "1"
@@ -275,11 +278,14 @@ in
 
   xsession.windowManager.bspwm.startupPrograms = [
     #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+    "xrandr -s 1920x1080"
     "nitrogen --restore"
     "/home/craig/.config/polybar/launch.sh"
     "picom"
     "variety"
     "flameshot"
+    "nm-applet"
+    "udiskie -t"
 ];
 
  #SXHKD
@@ -351,7 +357,7 @@ in
      };
   #polybar
      home.file.".config/polybar" = {
-     source = /home/craig/github/mainsys/.config/polybar;
+     source = /home/craig/github/work-pc/.config/polybar;
      recursive = true;
      executable = true;
      };
