@@ -167,11 +167,9 @@ in
      yubikey-manager
      yubikey-agent
      htop
-     gtop
      btop
      flameshot
      polybar
-     sxhkd
      picom
      rofi
      geany
@@ -190,6 +188,7 @@ in
 #Programs
   
   #ZSH
+  
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -208,11 +207,11 @@ in
 
   #KITTY
   programs.kitty = {
-    enable = true;
-    font.name = "meslo-lgs-nf";
-    font.size = 12;
-    settings.scrollback_lines = "10000";
-    };
+  enable = true;
+  font.name = "meslo-lgs-nf";
+  font.size = 12;
+  settings.scrollback_lines = "10000";
+  };
 	programs.kitty = {
 	extraConfig = ''
 	include /home/craig/github/mainsys/.config/kitty/kitty-themes/themes/Dracula.conf
@@ -221,6 +220,7 @@ in
   };
 
   #GITHUB
+  
   programs.git = {
     enable = true;
     userEmail = "craigdolson@gmail.com";
@@ -274,7 +274,7 @@ in
 	};
 
   xsession.windowManager.bspwm.startupPrograms = [
-     #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+    #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
     "nitrogen --restore"
     "/home/craig/.config/polybar/launch.sh"
     "picom"
@@ -355,19 +355,7 @@ in
      recursive = true;
      executable = true;
      };
-  #bspwm
-     home.file.".config/bpswm" = {
-     source = /home/craig/github/mainsys/.config/bspwm;
-     executable = true;
-     };
-  #sxhkd
-     home.file.".config/sxhkd" = {
-     source = /home/craig/github/mainsys/.config/sxhkd;
-     recursive = true;
-     executable = true;
-     };
-
-  #picom
+   #picom
      home.file.".config/picom" = {
      source = /home/craig/github/mainsys/.config/picom;
      };
