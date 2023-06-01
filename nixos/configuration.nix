@@ -57,9 +57,10 @@ in
   services.xserver.windowManager.bspwm.enable = true;
   services.xserver.windowManager.qtile.enable = true;
   
+  
   # MISC Services to enable
   services.pcscd.enable = true;
-  
+  security.polkit.enable = true;
   
   # Configure keymap in X11
   services.xserver = {
@@ -103,7 +104,8 @@ in
     shell = pkgs.zsh;
   };
 
-  # Allow unfree packages
+ 
+  #Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
@@ -114,6 +116,7 @@ in
     wget
     neofetch
     neovim
+    
   ];
   
   # Fonts
@@ -126,11 +129,11 @@ in
     nerdfonts
     meslo-lgs-nf
     ubuntu_font_family
+    google-fonts
   ];   
   
   programs.zsh.enable = true;
   
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -178,14 +181,31 @@ in
      xfce.thunar
      nitrogen
      variety
+     feh
      lxappearance
      networkmanagerapplet
      udiskie
      udisks
+     meld
+     polkit_gnome
+     timeshift
+     viewnior
+     bitwarden
+     google-authenticator
+     google-chrome
+     tor
+     tor-browser-bundle-bin
+     torsocks
+     vlc
+     veracrypt
+     
+     
    ];
  
 #Services 
   services.dunst.enable = true;
+  nixpkgs.config.allowUnfree = true;
+  
 
 #Programs
   
@@ -282,10 +302,10 @@ in
     "nitrogen --restore"
     "/home/craig/.config/polybar/launch.sh"
     "picom"
-    "variety"
     "flameshot"
     "nm-applet"
     "udiskie -t"
+    "variety"
 ];
 
  #SXHKD
@@ -340,7 +360,7 @@ in
     "super + {grave,Tab}" = "bspc {node,desktop} -f last";
   # default config - replaced by "# KeyChord Focus / Send to desktiop on given monitor -- reddit post - IT WORKS"
   # focus or send to the given desktop
-    " super + {_,shift + }{1-9,0}" = "bspc {desktop -f,node -d} '^{1-9,10}' --follow";
+    "super + {_,shift + }{1-9,0}" = "bspc {desktop -f,node -d} '^{1-9,10}' --follow";
   # Change focused monitor
     "super + alt + {Left,Right}" = "bspc monitor -f {west,east}";
   # move and switch windows between monitors
@@ -376,6 +396,8 @@ in
      source = /home/craig/github/mainsys/.config/alacritty;
      recursive = true;
      };
+
+
 
 
 
