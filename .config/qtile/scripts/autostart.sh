@@ -1,7 +1,7 @@
-#!/bin/bash
+#! /bin/sh
 
 #xrandr --output eDP-1 --off
-#xrandr -s auto
+xrandr -s 1920x1080
 picom &
 nm-applet &
 #lxsession &

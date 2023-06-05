@@ -19,9 +19,9 @@ powermenu = "/home/craig/.config/rofi/powermenu/type-2/powermenu.sh"
 
 ##Autostart Script for misc applications##
 @hook.subscribe.startup_once
-def start_once():
-	home = os.path.expanduser('~')
-	subprocess.call([home + '/.config/qtile/scripts/autostart.sh'])
+def autostart_once():
+	##home = os.path.expanduser('~')
+	subprocess.run('/home/craig/.config/qtile/scripts/autostart.sh')
 
 #CUSTOM COLORS - Catppuccin Mocha#
 def init_colors():
@@ -259,139 +259,7 @@ extension_defaults = widget_defaults.copy()
 ##Mouse Callbacks##
 
 screens = [
-    Screen(
-        top=bar.Bar(
-            [            
-                 widget.GroupBox(
-                                highlight_color = colors[10],
-                                highlight_method = "line",
-                                #block_highlight_text_color = colors[9],
-                                other_screen_border = colors[4],
-                                active = colors[26], #group numbers
-                                inactive = colors[21], #group numbers
-                                #hide_unused = True,
-                                margin_y = 4,
-                                margin_x = 0,
-                                padding_y = 5,
-                                padding_x = 2,
-                                spacing = 2
-                                ),
-                widget.Sep(
-                           linewidth = 2,
-                           padding = 12,
-                           size_percent = 60
-                           #foreground = colors[2],
-                           ),                 
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                             ),
-              
-				widget.CurrentLayout(),
-				widget.CurrentLayoutIcon(),
-				widget.Sep(
-                           linewidth = 0,
-                           padding = 6,
-                           ), 
-                #widget.Systray(),
-                #widget.Sep(
-                #           linewidth = 2,
-                #           padding = 10,
-                #           foreground = colors[4],
-                #           size_percent = 60
-                #           ),
-                widget.TextBox(
-                               text = '',
-                               background = colors[23],
-						       foreground = colors[6],
-						       fontsize = 12,
-                               font = 'Font Awesome 6 Free',
-						       padding = 3
-                               ),            
-                widget.CPU(
-                           background = colors[23],
-						   foreground = colors[6],
-						   mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e glances')},
-						   padding = 5,
-						   format = '{load_percent}%'
-                           ),
-                widget.Sep(
-                           linewidth = 2,
-                           padding = 10,
-                           #foreground = colors[4],
-                           size_percent = 60
-                           ),
-                widget.TextBox(
-                               text = '',
-                               background = colors[23],
-						       foreground = colors[7],
-						       fontsize = 12,
-                               font = 'Font Awesome 6 Free',
-						       padding = 3
-                               ),
-                widget.Memory(
-                              measure_mem='G',
-                              background = colors[23],
-						      foreground = colors[7],
-						      padding = 5,
-						      format = '{MemUsed:.0f}{mm}'
-                              ),
-                widget.Sep(
-                           linewidth = 2,
-                           padding = 10,
-                           #foreground = colors[4],
-                           size_percent = 60
-                           ),              
-                widget.TextBox(
-                               text = '',
-                               background = colors[23],
-						       foreground = colors[8],
-						       fontsize = 12,
-                               font = 'Font Awesome 6 Free',
-						       padding = 3
-                               ),
-                widget.Net(
-						   #interface = "enp0s31f6",	
-						   prefix = "M",
-						   background = colors[23],
-						   foreground = colors[8],
-						   padding = 5
-						   ),
-				widget.Sep(
-                           linewidth = 2,
-                           padding = 10,
-                           #foreground = colors[4],
-                           size_percent = 60
-                           ),		   
-                widget.TextBox(
-                               text = '',
-                               background = colors[23],
-						       foreground = colors[3],
-						       fontsize = 12,
-                               font = 'Font Awesome 6 Free',
-						       padding = 3
-                               ),
-                widget.Clock(
-                             format="%m-%d-%Y %H:%M",
-                             background = colors[23],
-						     foreground = colors[3],
-						     padding = 5,
-                             ),
-            ],
-            
-            24,
-            
-            opacity = 0.85       
-            
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
-    ),
-    
-Screen(
+		Screen(
         top=bar.Bar(
             [            
                  widget.GroupBox(
